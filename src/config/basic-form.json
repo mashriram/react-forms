@@ -131,11 +131,17 @@
                     "id": "maritalStatus",
                     "name": "maritalStatus",
                     "title": "Marital Status",
-                    "type": "dropdown",
+                    "type": "dropDown",
                     "placeholderText": "",
                     "minLength": "",
                     "maxLength": "",
+                    "defaultValue": "Select one",
                     "options": [
+                        {
+                            "name": "Select one",
+                            "value": "",
+                            "hidden": true
+                        },
                         {
                             "name": "Single",
                             "value": "single"

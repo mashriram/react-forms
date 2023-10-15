@@ -8,6 +8,7 @@ import {
     TEXT_INPUT,
     RADIO_BUTTON,
     CHECK_BOX,
+    DROP_DOWN,
 } from "./../../constants/AppConstants";
 
 export function Form() {
@@ -33,6 +34,8 @@ export function Form() {
                 prevState[fieldValue] = !prevState[fieldValue];
             }
             updatedFormData[fieldName] = prevState;
+        } else if (fieldType == DROP_DOWN) {
+            updatedFormData[fieldName] = fieldValue;
         }
         console.log("updatedFormData: ", JSON.stringify(updatedFormData));
         setFormData(updatedFormData);

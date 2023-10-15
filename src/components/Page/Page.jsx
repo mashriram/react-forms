@@ -9,7 +9,9 @@ import {
     TEXT_INPUT,
     RADIO_BUTTON,
     CHECK_BOX,
+    DROP_DOWN,
 } from "./../../constants/AppConstants";
+import { Dropdown } from "../Dropdown/Dropdown";
 
 function displayFields(
     isFirstPage,
@@ -49,6 +51,15 @@ function displayFields(
                     field={field}
                     onChange={onChange}
                     values={formData[field.name]}
+                />
+            );
+        } else if (field.type === DROP_DOWN) {
+            uiField = (
+                <Dropdown
+                    key={field.id}
+                    field={field}
+                    onChange={onChange}
+                    value={formData[field.name]}
                 />
             );
         }

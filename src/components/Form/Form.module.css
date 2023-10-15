@@ -1,3 +1,7 @@
 .form {
-    @apply text-pink-500 text-2xl px-5 py-5;
+    @apply text-xl px-5 py-2;
+}
+
+.title {
+    @apply text-3xl px-5 py-3 text-center;
 }

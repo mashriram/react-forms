@@ -75,17 +75,20 @@ export function Form() {
     let page = formConfig.pages[pageNumber];
     console.log("formdata: ", formData);
     return (
-        <form className={styles.form}>
-            <Page
-                isFirstPage={pageNumber === 0}
-                isLastPage={pageNumber === formConfig.pages.length - 1}
-                page={page}
-                formData={formData}
-                onPrev={onPrevHandler}
-                onNext={onNextHandler}
-                onSubmit={onSubmitHandler}
-                onChange={onChangeHandler}
-            />
-        </form>
+        <>
+            <h1 className={styles.title}>{formConfig.title}</h1>
+            <form className={styles.form}>
+                <Page
+                    isFirstPage={pageNumber === 0}
+                    isLastPage={pageNumber === formConfig.pages.length - 1}
+                    page={page}
+                    formData={formData}
+                    onPrev={onPrevHandler}
+                    onNext={onNextHandler}
+                    onSubmit={onSubmitHandler}
+                    onChange={onChangeHandler}
+                />
+            </form>
+        </>
     );
 }

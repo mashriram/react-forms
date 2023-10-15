@@ -1,4 +1,6 @@
-import React, { forwardRef } from "react";
+import React from "react";
+
+import styles from "./CheckBox.module.css";
 
 export function CheckBox({ field, onChange, values }) {
     function onCheckBoxChangeHandler(e) {
@@ -8,7 +10,7 @@ export function CheckBox({ field, onChange, values }) {
 
     return (
         <div>
-            <p>{field.title}</p>
+            <p className={styles.title}>{field.title}</p>
             {field.options.map((option) => {
                 let checked = values
                     ? values[option.value]
@@ -17,7 +19,7 @@ export function CheckBox({ field, onChange, values }) {
                     : false;
                 // console.log("optionChecked: ", option.name, checked);
                 return (
-                    <div key={option.id}>
+                    <div key={option.id} className={styles.input}>
                         <input
                             type="checkbox"
                             name={option.name}
@@ -26,7 +28,9 @@ export function CheckBox({ field, onChange, values }) {
                             onChange={onCheckBoxChangeHandler}
                             checked={checked}
                         />
-                        <label htmlFor={option.id}>{option.name}</label>
+                        <label htmlFor={option.id} className={styles.label}>
+                            {option.name}
+                        </label>
                         <br />
                     </div>
                 );

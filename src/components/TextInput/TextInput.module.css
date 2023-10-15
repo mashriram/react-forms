@@ -1,0 +1,9 @@
+.textInput {
+    @apply py-2;
+}
+.title {
+    @apply pl-2 pr-5 py-1;
+}
+.input {
+    @apply w-[50%] px-2 py-1 border-black border-[1px] border-solid rounded-md;
+}

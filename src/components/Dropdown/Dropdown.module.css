@@ -1,0 +1,12 @@
+.dropdown {
+    @apply py-4;
+}
+.title {
+    @apply px-2 py-2;
+}
+.input {
+    @apply px-6 py-1 border-black border-[1px] border-solid rounded-md;
+}
+.label {
+    @apply px-2;
+}

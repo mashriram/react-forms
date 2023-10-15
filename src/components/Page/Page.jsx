@@ -3,7 +3,7 @@ import { TextInput } from "../TextInput/TextInput";
 import { RadioButton } from "../RadioButton/RadioButton";
 import { CheckBox } from "../CheckBox/CheckBox";
 import { PrevButton } from "../PrevButton/PrevButton";
-import NextButton from "../NextButton/NextButton";
+import { NextButton } from "../NextButton/NextButton";
 import { SubmitButton } from "../SubmitButton/SubmitButton";
 import {
     TEXT_INPUT,
@@ -12,6 +12,7 @@ import {
     DROP_DOWN,
 } from "./../../constants/AppConstants";
 import { Dropdown } from "../Dropdown/Dropdown";
+import styles from "./Page.module.css";
 
 function displayFields(
     isFirstPage,
@@ -91,8 +92,8 @@ export function Page({
 }) {
     console.log(isFirstPage, isLastPage);
     return (
-        <div>
-            <h1>{title}</h1>
+        <div className={styles.page}>
+            <h1 className={styles.title}>{title}</h1>
             {displayFields(
                 isFirstPage,
                 isLastPage,

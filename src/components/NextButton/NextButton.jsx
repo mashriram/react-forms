@@ -1,9 +1,11 @@
 import React from "react";
 
-export default function NextButton() {
+import styles from "./NextButton.module.css"
+
+export function NextButton() {
     return (
-        <div>
-            <button type="button">Next</button>
+        <div className={styles.btnDiv}>
+            <button type="button" id={styles.btn}>Next</button>
         </div>
     );
 }

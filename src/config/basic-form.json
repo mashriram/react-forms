@@ -1,0 +1,163 @@
+{
+    "id": "basicForm",
+    "title": "Basic Form",
+    "description": "this is a basic form",
+    "header": "",
+    "footer": "",
+    "layout": "horizontal / vertical",
+    "submitButton": {
+        "title": "Submit"
+    },
+    "pages": [
+        {
+            "title": "Personal Details",
+            "fields": [
+                {
+                    "id": "firstName",
+                    "name": "firstName",
+                    "title": "First Name",
+                    "type": "textInput",
+                    "placeholderText": "First Name",
+                    "minLength": "",
+                    "maxLength": "",
+                    "validations": [
+                        {
+                            "type": "required",
+                            "isRequired": true,
+                            "errorMessage": "Required field cannot be blank"
+                        },
+                        {
+                            "type": "maxLengthCheck",
+                            "maxLength": "15",
+                            "errorMessage": "Max length allowed is ${maxLength}"
+                        }
+                    ]
+                },
+                {
+                    "id": "lastName",
+                    "name": "lastName",
+                    "title": "Last Name",
+                    "type": "textInput",
+                    "placeholderText": "Last Name",
+                    "minLength": "",
+                    "maxLength": "",
+                    "validations": [
+                        {
+                            "type": "required",
+                            "isRequired": true,
+                            "errorMessage": "Required field cannot be blank"
+                        },
+                        {
+                            "type": "maxLengthCheck",
+                            "maxLength": "15",
+                            "errorMessage": "Max length allowed is ${maxLength}"
+                        }
+                    ]
+                },
+                {
+                    "id": "gender",
+                    "name": "gender",
+                    "title": "Please select your gender",
+                    "type": "radioButton",
+                    "placeholderText": "",
+                    "minLength": "",
+                    "maxLength": "",
+                    "options": [
+                        {
+                            "key": "1",
+                            "id": "male",
+                            "name": "gender",
+                            "value": "Male"
+                        },
+                        {
+                            "key": "2",
+                            "id": "female",
+                            "name": "gender",
+                            "value": "Female"
+                        },
+                        {
+                            "key": "3",
+                            "id": "nilGender",
+                            "name": "gender",
+                            "value": "Prefer Not to say"
+                        }
+                    ],
+                    "validations": [
+                        {
+                            "type": "required",
+                            "isRequired": true,
+                            "errorMessage": "Required field cannot be blank"
+                        }
+                    ]
+                },
+                {
+                    "id": "hobbies",
+                    "name": "hobbies",
+                    "title": "Hobbies",
+                    "type": "checkBox",
+                    "placeholderText": "",
+                    "minLength": "",
+                    "maxLength": "",
+                    "allowMultipleSelection": true,
+                    "options": [
+                        {
+                            "key": "1",
+                            "id": "sudoku",
+                            "name": "Sudoku",
+                            "value": "sudoku"
+                        },
+                        {
+                            "key": "2",
+                            "id": "singing",
+                            "name": "Singing",
+                            "value": "singing"
+                        },
+                        {
+                            "key": "3",
+                            "id": "gaming",
+                            "name": "Gaming",
+                            "value": "gaming"
+                        }
+                    ],
+                    "validations": [
+                        {
+                            "type": "required",
+                            "isRequired": true,
+                            "errorMessage": "Required field cannot be blank"
+                        }
+                    ]
+                },
+                {
+                    "id": "maritalStatus",
+                    "name": "maritalStatus",
+                    "title": "Marital Status",
+                    "type": "dropdown",
+                    "placeholderText": "",
+                    "minLength": "",
+                    "maxLength": "",
+                    "options": [
+                        {
+                            "name": "Single",
+                            "value": "single"
+                        },
+                        {
+                            "name": "Married",
+                            "value": "married"
+                        },
+                        {
+                            "name": "Prefer Not to say",
+                            "value": "NA"
+                        }
+                    ],
+                    "validations": [
+                        {
+                            "type": "required",
+                            "isRequired": true,
+                            "errorMessage": "Required field cannot be blank"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

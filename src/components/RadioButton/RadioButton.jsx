@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
-export function RadioButton({ field }) {
-    const [optionValue, setOptionValue] = useState("");
-
+export function RadioButton({ field, onChange, value }) {
     function onOptionChangeHandler(e) {
         console.log(e.target.value);
-        setOptionValue(e.target.value);
+        onChange(field.type, field.name, e.target.value);
     }
 
+    console.log("radioValue: ", value);
     return (
         <div>
             <p>{field.title}</p>
@@ -19,7 +18,7 @@ export function RadioButton({ field }) {
                             name={option.name}
                             id={option.id}
                             value={option.value}
-                            checked={option.value === optionValue}
+                            checked={option.value === value}
                             onChange={onOptionChangeHandler}
                         />
                         <label htmlFor={option.id}>{option.value}</label>

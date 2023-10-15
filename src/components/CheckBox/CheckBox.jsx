@@ -15,7 +15,7 @@ export function CheckBox({ field, onChange, values }) {
                         ? values[option.value]
                         : false
                     : false;
-                console.log("optionChecked: ", option.name, checked);
+                // console.log("optionChecked: ", option.name, checked);
                 return (
                     <div key={option.id}>
                         <input

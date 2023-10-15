@@ -22,6 +22,7 @@ export function Form() {
         if (fieldType === TEXT_INPUT) {
             updatedFormData[fieldName] = fieldValue;
         } else if (fieldType == RADIO_BUTTON) {
+            updatedFormData[fieldName] = fieldValue;
         } else if (fieldType == CHECK_BOX) {
             let prevState = updatedFormData[fieldName];
             if (!prevState) {

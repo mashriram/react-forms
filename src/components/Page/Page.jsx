@@ -5,6 +5,11 @@ import { CheckBox } from "../CheckBox/CheckBox";
 import { PrevButton } from "../PrevButton/PrevButton";
 import NextButton from "../NextButton/NextButton";
 import { SubmitButton } from "../SubmitButton/SubmitButton";
+import {
+    TEXT_INPUT,
+    RADIO_BUTTON,
+    CHECK_BOX,
+} from "./../../constants/AppConstants";
 
 function displayFields(
     isFirstPage,
@@ -19,7 +24,7 @@ function displayFields(
     let uiFields = [];
     for (const field of fields) {
         let uiField;
-        if (field.type == "textInput") {
+        if (field.type === TEXT_INPUT) {
             uiField = (
                 <TextInput
                     key={field.id}
@@ -28,12 +33,16 @@ function displayFields(
                     value={formData[field.name] ? formData[field.name] : ""}
                 />
             );
-        } else if (field.type == "radioButton") {
+        } else if (field.type === RADIO_BUTTON) {
             uiField = (
-                <RadioButton key={field.id} field={field} onChange={onChange} />
+                <RadioButton
+                    key={field.id}
+                    field={field}
+                    onChange={onChange}
+                    value={formData[field.name]}
+                />
             );
-        } else if (field.type == "checkBox") {
-            console.log("checkboxPage: ", formData[field.name]);
+        } else if (field.type === CHECK_BOX) {
             uiField = (
                 <CheckBox
                     key={field.id}
